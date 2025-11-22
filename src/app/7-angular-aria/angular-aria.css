@@ -1,0 +1,5 @@
+/* Angular Aria component - visible focus styles */
+button:focus,
+button:focus-visible {
+  outline: 4px solid hsl(196, 100%, 50%);
+}

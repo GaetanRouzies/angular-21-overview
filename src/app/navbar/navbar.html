@@ -1,0 +1,21 @@
+<nav class="p-2 border-b">
+  <div class="flex items-center justify-between max-w-4xl mx-auto">
+    <button
+      class="bg-gray-500"
+      [disabled]="!previousExample()"
+      (click)="previousExample() && navigateTo(previousExample()!)"
+    >
+      Previous
+    </button>
+
+    <h1>{{ currentExample().title }}</h1>
+
+    <button
+      class="bg-gray-500"
+      [disabled]="!nextExample()"
+      (click)="nextExample() && navigateTo(nextExample()!)"
+    >
+      Next
+    </button>
+  </div>
+</nav>

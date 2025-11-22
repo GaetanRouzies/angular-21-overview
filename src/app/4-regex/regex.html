@@ -1,0 +1,18 @@
+<div class="border rounded p-4 mb-4">
+  <h2>Text</h2>
+  <p>{{ text }}</p>
+</div>
+
+<div class="border rounded p-4 mb-4">
+  <h2>Email matches:</h2>
+  @for (match of text.match(/[\w\.-]+@[\w\.-]+\.\w+/g) || []; track match) {
+    <p>{{ match }}</p>
+  }
+</div>
+
+<div class="border rounded p-4 mb-4">
+  <h2>Phone matches:</h2>
+  @for (match of text.match(/\+33[\s\d]+/g) || []; track match) {
+    <p>{{ match }}</p>
+  }
+</div>

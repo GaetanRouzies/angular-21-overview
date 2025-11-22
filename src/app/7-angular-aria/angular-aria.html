@@ -1,0 +1,19 @@
+<div class="border rounded p-4 mb-4">
+  <h2>Toolbar with ARIA</h2>
+  <div ngToolbar aria-label="Text Formatting Tools" class="flex gap-2 p-2 border rounded">
+    <button ngToolbarWidget value="bold" type="button" class="bg-primary">Bold</button>
+    <button ngToolbarWidget value="italic" type="button" class="bg-primary">Italic</button>
+    <button ngToolbarWidget value="underline" type="button" class="bg-primary">Underline</button>
+  </div>
+  <p>Use Tab to focus, then Arrow keys (← →) to navigate between buttons</p>
+</div>
+
+<div class="border rounded p-4">
+  <h2>Toolbar without ARIA</h2>
+  <div class="flex gap-2 p-2 border rounded">
+    <button type="button" class="bg-primary">Bold</button>
+    <button type="button" class="bg-primary">Italic</button>
+    <button type="button" class="bg-primary">Underline</button>
+  </div>
+  <p>Arrow keys navigation not available without ARIA attributes</p>
+</div>

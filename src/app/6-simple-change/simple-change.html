@@ -1,0 +1,8 @@
+<div class="mb-4">
+  <label>
+    Enter a value:
+    <input class="border rounded px-2 py-1 ml-2" [(ngModel)]="value" />
+  </label>
+</div>
+
+<app-child [value]="value()" />

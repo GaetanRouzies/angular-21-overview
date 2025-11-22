@@ -1,0 +1,6 @@
+<h2 class="mb-3">Pokemons</h2>
+<ul class="border rounded p-4">
+  @for (pokemon of pokemons$ | async; track pokemon.name) {
+    <li class="py-1">{{ pokemon.name }}</li>
+  }
+</ul>

@@ -1,0 +1,21 @@
+<form [formArray]="formArray" class="mb-4">
+  @for (control of formArray.controls; track $index) {
+    <div class="mb-2">
+      <input
+        class="border rounded px-2 py-1 mr-2"
+        [formControl]="control"
+        placeholder="Enter item"
+      />
+      <button class="px-3 py-1 bg-gray-500" type="button" (click)="removeItem($index)">
+        Remove
+      </button>
+    </div>
+  }
+
+  <button class="bg-primary" type="button" (click)="addItem()">Add Item</button>
+</form>
+
+<div class="border rounded p-4">
+  <h2>Form Values:</h2>
+  <pre class="bg-gray-100 p-2 rounded">{{ formArray.value | json }}</pre>
+</div>
