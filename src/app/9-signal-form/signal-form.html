@@ -2,30 +2,30 @@
   <div class="mb-2">
     <label>
       Name:
-      <input class="border rounded px-2 py-1 ml-2" [field]="formTree.name" />
+      <input class="border rounded px-2 py-1 ml-2" [field]="form.name" />
     </label>
-    @if (formTree.name().errors().length > 0) {
-      <p>{{ formTree.name().errors()[0].message }}</p>
+    @if (form.name().errors().length > 0) {
+      <p>{{ form.name().errors()[0].message }}</p>
     }
   </div>
 
   <div class="mb-2">
     <label>
       Email:
-      <input class="border rounded px-2 py-1 ml-2" [field]="formTree.email" />
+      <input class="border rounded px-2 py-1 ml-2" [field]="form.email" />
     </label>
-    @if (formTree.email().errors().length > 0) {
-      <p>{{ formTree.email().errors()[0].message }}</p>
+    @if (form.email().errors().length > 0) {
+      <p>{{ form.email().errors()[0].message }}</p>
     }
   </div>
 
-  <button class="bg-primary" type="button" (click)="onSubmit()" [disabled]="!formTree().valid()">
+  <button class="bg-primary" type="button" (click)="onSubmit()" [disabled]="!form().valid()">
     Submit
   </button>
 </form>
 
 <div class="border rounded p-4">
   <h2>Form Values:</h2>
-  <pre class="bg-gray-100 p-2 rounded">{{ formTree().value() | json }}</pre>
-  <p>Valid: {{ formTree().valid() }}</p>
+  <pre class="bg-gray-100 p-2 rounded">{{ form().value() | json }}</pre>
+  <p>Valid: {{ form().valid() }}</p>
 </div>

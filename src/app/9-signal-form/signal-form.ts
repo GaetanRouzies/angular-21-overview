@@ -9,17 +9,16 @@ import { CommonModule } from '@angular/common'
   templateUrl: './signal-form.html',
 })
 export class SignalForm {
-  model = signal({ name: '', email: '' })
+  person = signal({ name: '', email: '' })
 
-  formTree = form(this.model, (f) => {
-    required(f.name)
-    required(f.email)
+  form = form(this.person, (path) => {
+    required(path.name)
+    required(path.email)
   })
 
   onSubmit() {
-    const formState = this.formTree()
-    if (formState.valid()) {
-      console.log('Form values:', formState.value())
+    if (this.form().valid()) {
+      console.log('Form values:', this.form().value())
     }
   }
 }
